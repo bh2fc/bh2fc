@@ -5,98 +5,96 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta property="og:title" content="방화2동 축구회">
-<meta property="og:description" content="감독 · 코치 · 선수 명단">
+<meta property="og:description" content="방화2동 축구회">
 <meta property="og:image" content="https://bh2fc.github.io/bh2fc/thumb.jpg">
 <meta property="og:type" content="website">
 
-<title>1976 BH2FC MEMBERS</title>
+<title>방화2동 축구회</title>
 
 <style>
-body{
-  margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;
-  background:#eee;
-}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;background:#eee}
+
+/* HEADER */
 .header{
-  padding:28px 16px;
-  text-align:center;
-  background:repeating-linear-gradient(
-    90deg,#c62828,#c62828 40px,#fff 40px,#fff 80px
-  );
+  padding:26px 16px;text-align:center;
+  background:repeating-linear-gradient(90deg,#c62828,#c62828 40px,#fff 40px,#fff 80px)
 }
 .header h1{
-  margin:0;
-  font-size:28px;
-  background:rgba(255,255,255,.9);
-  padding:8px 18px;
-  border-radius:14px;
-  display:inline-block;
+  margin:0;font-size:26px;
+  background:rgba(255,255,255,.95);
+  padding:8px 18px;border-radius:14px;display:inline-block
 }
 .header p{
-  margin-top:10px;
-  font-size:14px;
+  margin-top:8px;font-size:13px;
   background:rgba(255,255,255,.85);
-  display:inline-block;
-  padding:4px 12px;
-  border-radius:20px;
+  display:inline-block;padding:4px 12px;border-radius:20px
 }
-.container{
-  background:#f9f9f9;
-  border-radius:24px 24px 0 0;
-  padding:20px 14px 40px;
+
+/* NAV */
+.nav{
+  display:flex;gap:6px;padding:10px;
+  overflow-x:auto;background:#fff;
+  position:sticky;top:0;z-index:10
 }
+.nav a{
+  padding:6px 12px;border-radius:20px;
+  background:#c62828;color:#fff;
+  font-size:12px;text-decoration:none;white-space:nowrap
+}
+
+/* CONTENT */
+.container{background:#f9f9f9;border-radius:24px 24px 0 0;padding:18px 12px 60px}
 .age-title{
-  margin:26px 6px 12px;
-  font-size:18px;
-  font-weight:800;
-  color:#c62828;
-  border-left:6px solid #c62828;
-  padding-left:10px;
+  margin:26px 4px 10px;
+  font-size:18px;font-weight:800;color:#c62828;
+  border-left:6px solid #c62828;padding-left:10px
 }
+.age-title span{font-size:13px;color:#555;margin-left:6px}
+
+/* 기본(모바일) */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(140px,1fr));
-  gap:14px;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px
 }
+
+/* PC 화면 */
+@media (min-width: 768px){
+  .grid{
+    grid-template-columns:repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+
+
+/* CARD */
 .card{
-  background:#fff;
-  border-radius:16px;
-  padding:10px;
-  text-align:center;
+  background:#fff;border-radius:16px;
+  padding:10px;text-align:center;
   box-shadow:0 3px 8px rgba(0,0,0,.12);
-  position:relative;
+  position:relative
 }
-.card img{
-  width:100%;
-  border-radius:12px;
-  background:#ddd;
-}
+.card img{width:100%;border-radius:12px;background:#ddd}
 .role{
-  position:absolute;
-  top:8px;
-  left:10px;
-  font-size:11px;
-  padding:3px 6px;
-  border-radius:6px;
-  color:#fff;
+  position:absolute;top:8px;left:8px;
+  font-size:11px;padding:3px 6px;
+  border-radius:6px;color:#fff
 }
-.role.manager{background:#c62828;}
-.role.coach{background:#000;}
-.name{
-  margin-top:8px;
-  font-size:15px;
-  font-weight:700;
+.role.manager{background:#c62828}
+.role.coach{background:#000}
+.name{margin-top:6px;font-size:14px;font-weight:700}
+.birth{font-size:12px;color:#666}
+
+/* TOP BUTTON */
+#topBtn{
+  position:fixed;bottom:20px;right:16px;
+  background:#c62828;color:#fff;
+  border:none;border-radius:50%;
+  width:44px;height:44px;font-size:20px;
+  display:none;cursor:pointer
 }
-.birth{
-  font-size:12px;
-  color:#666;
-}
-.footer{
-  margin-top:30px;
-  text-align:center;
-  font-size:12px;
-  color:#777;
-}
+
+.footer{text-align:center;font-size:12px;color:#777;margin-top:30px}
 </style>
 </head>
 
@@ -107,73 +105,79 @@ body{
   <p>OFFICIAL SQUAD · MEMBERS</p>
 </div>
 
+<div class="nav">
+  <a href="#70">70대</a>
+  <a href="#60">60대</a>
+  <a href="#50">50대</a>
+  <a href="#40">40대</a>
+  <a href="#30">30대</a>
+  <a href="#20">20대</a>
+</div>
+
 <div class="container">
+
 
 <!-- STAFF -->
 <h2 class="age-title">STAFF</h2>
 <div class="grid">
-  <div class="card"><div class="role manager">경기부 회장</div><img src="p50.jpg"><div class="name">김정욱</div><div class="birth" data-birth="1985"></div></div>
-  <div class="card"><div class="role manager">감독</div><img src="p55.jpg"><div class="name">임진석</div><div class="birth" data-birth="1985"></div></div>
-  <div class="card"><div class="role coach">수석코치</div><img src="p24.jpg"><div class="name">윤석훈</div><div class="birth" data-birth="1969"></div></div>
-  <div class="card"><div class="role coach">수석코치</div><img src="p51.jpg"><div class="name">김후식</div><div class="birth" data-birth="1985"></div></div>
-  <div class="card"><div class="role coach">수석코치</div><img src="p69.jpg"><div class="name">채영석</div><div class="birth" data-birth="1989"></div></div>
-  <div class="card"><div class="role coach">코치</div><img src="p75.jpg"><div class="name">이종훈</div><div class="birth" data-birth="1994"></div></div>
-  <div class="card"><div class="role coach">코치</div><img src="p78.jpg"><div class="name">윤여준</div><div class="birth" data-birth="1995"></div></div>
-  <div class="card"><div class="role coach">코치</div><img src="p86.jpg"><div class="name">김종관</div><div class="birth" data-birth="1996"></div></div>
+   <div class="card"><div class="role manager">경기부 회장</div><img src="p50.jpg"><div class="name">김정욱</div><div class="birth" data-birth="1985"></div></div>
+   <div class="card"><div class="role manager">감독</div><img src="p55.jpg"><div class="name">임진석</div><div class="birth" data-birth="1985"></div></div>
+   <div class="card"><div class="role coach">수석코치</div><img src="p24.jpg"><div class="name">윤석훈</div><div class="birth" data-birth="1969"></div></div>
+   <div class="card"><div class="role coach">수석코치</div><img src="p51.jpg"><div class="name">김후식</div><div class="birth" data-birth="1985"></div></div>
+   <div class="card"><div class="role coach">수석코치</div><img src="p69.jpg"><div class="name">채영석</div><div class="birth" data-birth="1989"></div></div>
+   <div class="card"><div class="role coach">코치</div><img src="p75.jpg"><div class="name">이종훈</div><div class="birth" data-birth="1994"></div></div>
+   <div class="card"><div class="role coach">코치</div><img src="p78.jpg"><div class="name">윤여준</div><div class="birth" data-birth="1995"></div></div>
+   <div class="card"><div class="role coach">코치</div><img src="p86.jpg"><div class="name">김종관</div><div class="birth" data-birth="1996"></div></div>
 </div>
 
-<!-- 70대 -->
-<h2 class="age-title">70대</h2>
+<h2 id="70" class="age-title">70대 <span></span></h2>
 <div class="grid">
-  <div class="card"><img src="p01.jpg"><div class="name">이용오</div><div class="birth" data-birth="1953"></div></div>
-  <div class="card"><img src="p02.jpg"><div class="name">노병희</div><div class="birth" data-birth="1954"></div></div>
-  <div class="card"><img src="p03.jpg"><div class="name">김화만</div><div class="birth" data-birth="1955"></div></div>
-  <div class="card"><img src="p04.jpg"><div class="name">윤대중</div><div class="birth" data-birth="1955"></div></div>
-  <div class="card"><img src="p05.jpg"><div class="name">박태수</div><div class="birth" data-birth="1955"></div></div>
-  <div class="card"><img src="p06.jpg"><div class="name">안승한</div><div class="birth" data-birth="1957"></div></div>
-  <div class="card"><img src="p07.jpg"><div class="name">김동욱</div><div class="birth" data-birth="1956"></div></div>
-  <div class="card"><img src="p08.jpg"><div class="name">황수용</div><div class="birth" data-birth="1957"></div></div>
+   <div class="card"><img src="p01.jpg"><div class="name">이용오</div><div class="birth" data-birth="1953"></div></div>
+   <div class="card"><img src="p02.jpg"><div class="name">노병희</div><div class="birth" data-birth="1954"></div></div>
+   <div class="card"><img src="p03.jpg"><div class="name">김화만</div><div class="birth" data-birth="1955"></div></div>
+   <div class="card"><img src="p04.jpg"><div class="name">윤대중</div><div class="birth" data-birth="1955"></div></div>
+   <div class="card"><img src="p05.jpg"><div class="name">박태수</div><div class="birth" data-birth="1955"></div></div>
+   <div class="card"><img src="p06.jpg"><div class="name">안승한</div><div class="birth" data-birth="1957"></div></div>
+   <div class="card"><img src="p07.jpg"><div class="name">김동욱</div><div class="birth" data-birth="1956"></div></div>
+   <div class="card"><img src="p08.jpg"><div class="name">황수용</div><div class="birth" data-birth="1957"></div></div>
 </div>
 
-<!-- 60대 -->
-<h2 class="age-title">60대</h2>
+<h2 id="60" class="age-title">60대 <span></span></h2>
 <div class="grid">
-  <div class="card"><img src="p09.jpg"><div class="name">박경식</div><div class="birth" data-birth="1958"></div></div>
-  <div class="card"><img src="p10.jpg"><div class="name">강대식</div><div class="birth" data-birth="1960"></div></div>
-  <div class="card"><img src="p11.jpg"><div class="name">이용중</div><div class="birth" data-birth="1960"></div></div>
-  <div class="card"><img src="p12.jpg"><div class="name">윤세오</div><div class="birth" data-birth="1960"></div></div>
-  <div class="card"><img src="p13.jpg"><div class="name">김인원</div><div class="birth" data-birth="1962"></div></div>
-  <div class="card"><img src="p14.jpg"><div class="name">양태주</div><div class="birth" data-birth="1962"></div></div>
-  <div class="card"><img src="p15.jpg"><div class="name">김병열</div><div class="birth" data-birth="1962"></div></div>
-  <div class="card"><img src="p16.jpg"><div class="name">홍종문</div><div class="birth" data-birth="1963"></div></div>
-  <div class="card"><img src="p17.jpg"><div class="name">송동주</div><div class="birth" data-birth="1964"></div></div>
-  <div class="card"><img src="p18.jpg"><div class="name">노기택</div><div class="birth" data-birth="1965"></div></div>
-  <div class="card"><img src="p19.jpg"><div class="name">김효성</div><div class="birth" data-birth="1965"></div></div>
-  <div class="card"><img src="p20.jpg"><div class="name">박재남</div><div class="birth" data-birth="1966"></div></div>
-  <div class="card"><img src="p21.jpg"><div class="name">이진호</div><div class="birth" data-birth="1967"></div></div>
+    <div class="card"><img src="p09.jpg"><div class="name">박경식</div><div class="birth" data-birth="1958"></div></div>
+   <div class="card"><img src="p10.jpg"><div class="name">강대식</div><div class="birth" data-birth="1960"></div></div>
+   <div class="card"><img src="p11.jpg"><div class="name">이용중</div><div class="birth" data-birth="1960"></div></div>
+   <div class="card"><img src="p12.jpg"><div class="name">윤세오</div><div class="birth" data-birth="1960"></div></div>
+   <div class="card"><img src="p13.jpg"><div class="name">김인원</div><div class="birth" data-birth="1962"></div></div>
+   <div class="card"><img src="p14.jpg"><div class="name">양태주</div><div class="birth" data-birth="1962"></div></div>
+   <div class="card"><img src="p15.jpg"><div class="name">김병열</div><div class="birth" data-birth="1962"></div></div>
+   <div class="card"><img src="p16.jpg"><div class="name">홍종문</div><div class="birth" data-birth="1963"></div></div>
+   <div class="card"><img src="p17.jpg"><div class="name">송동주</div><div class="birth" data-birth="1964"></div></div>
+   <div class="card"><img src="p18.jpg"><div class="name">노기택</div><div class="birth" data-birth="1965"></div></div>
+   <div class="card"><img src="p19.jpg"><div class="name">김효성</div><div class="birth" data-birth="1965"></div></div>
+   <div class="card"><img src="p20.jpg"><div class="name">박재남</div><div class="birth" data-birth="1966"></div></div>
+   <div class="card"><img src="p21.jpg"><div class="name">이진호</div><div class="birth" data-birth="1967"></div></div>
 </div>
 
-<!-- 50대 -->
-<h2 class="age-title">50대</h2>
+<h2 id="50" class="age-title">50대 <span></span></h2>
 <div class="grid">
-  <div class="card"><img src="p22.jpg"><div class="name">최윤모</div><div class="birth" data-birth="1968"></div></div>
-  <div class="card"><img src="p23.jpg"><div class="name">임병규</div><div class="birth" data-birth="1968"></div></div>
-  <div class="card"><img src="p24.jpg"><div class="name">윤석훈</div><div class="birth" data-birth="1969"></div></div>
-  <div class="card"><img src="p25.jpg"><div class="name">김용창</div><div class="birth" data-birth="1969"></div></div>
-  <div class="card"><img src="p26.jpg"><div class="name">김문식</div><div class="birth" data-birth="1969"></div></div>
-  <div class="card"><img src="p27.jpg"><div class="name">이열근</div><div class="birth" data-birth="1971"></div></div>
-  <div class="card"><img src="p28.jpg"><div class="name">김태수</div><div class="birth" data-birth="1971"></div></div>
-  <div class="card"><img src="p29.jpg"><div class="name">신성일</div><div class="birth" data-birth="1972"></div></div>
-  <div class="card"><img src="p30.jpg"><div class="name">서영기</div><div class="birth" data-birth="1973"></div></div>
-  <div class="card"><img src="p31.jpg"><div class="name">오정현</div><div class="birth" data-birth="1974"></div></div>
-  <div class="card"><img src="p32.jpg"><div class="name">이영욱</div><div class="birth" data-birth="1975"></div></div>
-  <div class="card"><img src="p33.jpg"><div class="name">김희중</div><div class="birth" data-birth="1975"></div></div>
+    <div class="card"><img src="p22.jpg"><div class="name">최윤모</div><div class="birth" data-birth="1968"></div></div>
+   <div class="card"><img src="p23.jpg"><div class="name">임병규</div><div class="birth" data-birth="1968"></div></div>
+   <div class="card"><img src="p24.jpg"><div class="name">윤석훈</div><div class="birth" data-birth="1969"></div></div>
+   <div class="card"><img src="p25.jpg"><div class="name">김용창</div><div class="birth" data-birth="1969"></div></div>
+   <div class="card"><img src="p26.jpg"><div class="name">김문식</div><div class="birth" data-birth="1969"></div></div>
+   <div class="card"><img src="p27.jpg"><div class="name">이열근</div><div class="birth" data-birth="1971"></div></div>
+   <div class="card"><img src="p28.jpg"><div class="name">김태수</div><div class="birth" data-birth="1971"></div></div>
+   <div class="card"><img src="p29.jpg"><div class="name">신성일</div><div class="birth" data-birth="1972"></div></div>
+   <div class="card"><img src="p30.jpg"><div class="name">서영기</div><div class="birth" data-birth="1973"></div></div>
+   <div class="card"><img src="p31.jpg"><div class="name">오정현</div><div class="birth" data-birth="1974"></div></div>
+   <div class="card"><img src="p32.jpg"><div class="name">이영욱</div><div class="birth" data-birth="1975"></div></div>
+   <div class="card"><img src="p33.jpg"><div class="name">김희중</div><div class="birth" data-birth="1975"></div></div>
 </div>
 
-<!-- 40대 -->
-<h2 class="age-title">40대</h2>
+<h2 id="40" class="age-title">40대 <span></span></h2>
 <div class="grid">
-  <div class="card"><img src="p34.jpg"><div class="name">성재혁</div><div class="birth" data-birth="1978"></div></div>
+   <div class="card"><img src="p34.jpg"><div class="name">성재혁</div><div class="birth" data-birth="1978"></div></div>
   <div class="card"><img src="p35.jpg"><div class="name">서홍석</div><div class="birth" data-birth="1979"></div></div>
   <div class="card"><img src="p36.jpg"><div class="name">강준구</div><div class="birth" data-birth="1979"></div></div>
   <div class="card"><img src="p37.jpg"><div class="name">김호영</div><div class="birth" data-birth="1980"></div></div>
@@ -201,10 +205,9 @@ body{
   <div class="card"><img src="p59.jpg"><div class="name">이성훈</div><div class="birth" data-birth="1987"></div></div>
 </div>
 
-<!-- 30대 -->
-<h2 class="age-title">30대</h2>
+<h2 id="30" class="age-title">30대 <span></span></h2>
 <div class="grid">
-  <div class="card"><img src="p60.jpg"><div class="name">양용석</div><div class="birth" data-birth="1988"></div></div>
+   <div class="card"><img src="p60.jpg"><div class="name">양용석</div><div class="birth" data-birth="1988"></div></div>
   <div class="card"><img src="p61.jpg"><div class="name">김지훈</div><div class="birth" data-birth="1988"></div></div>
   <div class="card"><img src="p62.jpg"><div class="name">이재윤</div><div class="birth" data-birth="1988"></div></div>
   <div class="card"><img src="p63.jpg"><div class="name">정민구</div><div class="birth" data-birth="1988"></div></div>
@@ -235,25 +238,40 @@ body{
   <div class="card"><img src="p88.jpg"><div class="name">윤지환</div><div class="birth" data-birth="1997"></div></div>
   <div class="card"><img src="p89.jpg"><div class="name">서영훈</div><div class="birth" data-birth="1999"></div></div>
   <div class="card"><img src="p90.jpg"><div class="name">양기승</div><div class="birth" data-birth="1999"></div></div>
-
 </div>
 
-<!-- 20대 -->
-<h2 class="age-title">20대</h2>
+<h2 id="20" class="age-title">20대 <span></span></h2>
 <div class="grid">
   <div class="card"><img src="p91.jpg"><div class="name">김재서</div><div class="birth" data-birth="2000"></div></div>
 </div>
 
 <div class="footer">© BH2FC1976 · Members Only</div>
-
 </div>
 
+<button id="topBtn">↑</button>
+
 <script>
+/* 나이 자동 계산 */
 const year=new Date().getFullYear();
-document.querySelectorAll('.birth').forEach(el=>{
-  const b=el.dataset.birth;
-  el.textContent=`${b}년생 · ${year-b+1}세`;
+document.querySelectorAll('.birth').forEach(b=>{
+  const y=b.dataset.birth;
+  b.textContent=`${y}년생 · ${year-y+1}세`;
 });
+
+/* 인원수 계산 */
+
+document.querySelectorAll('.age-title').forEach(t=>{
+  const g=t.nextElementSibling;
+  if(!g||!g.classList.contains('grid'))return;
+  const c=g.querySelectorAll('.card').length;
+  t.querySelector('span') && (t.querySelector('span').textContent=`(${c}명)`);
+});
+
+
+/* TOP 버튼 */
+const btn=document.getElementById('topBtn');
+window.addEventListener('scroll',()=>btn.style.display=window.scrollY>300?'block':'none');
+btn.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
 </script>
 
 </body>
